@@ -1,7 +1,4 @@
-﻿[cdsClienteNOME]
-Coordinates=293,1,113,36
-
-[btCancel]
+﻿[btCancel]
 Coordinates=277,10,65,58
 
 [Label1]
@@ -12,9 +9,6 @@ Coordinates=141,122,53,58
 
 [btAdd]
 Coordinates=10,122,49,58
-
-[cdsClienteCPF]
-Coordinates=293,56,100,36
 
 [btAlt]
 Coordinates=95,10,49,58
@@ -35,12 +29,12 @@ Coordinates=10,10,75,102
 Coordinates=94,1,61,36
 
 []
-Coordinates=293,166,91,36
+Coordinates=293,56,100,36
 
-[dbNome]
+[dbTipo]
 Coordinates=278,122,62,36
 Visible=True
 
-[edCpf]
+[dbSenha]
 Coordinates=10,190,62,36
 

@@ -3,8 +3,8 @@ object Form1: TForm1
   Top = 0
   BorderStyle = bsDialog
   Caption = 'Memoria Virtual'
-  ClientHeight = 338
-  ClientWidth = 542
+  ClientHeight = 392
+  ClientWidth = 527
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -18,20 +18,20 @@ object Form1: TForm1
   object Label1: TLabel
     Left = 32
     Top = 29
-    Width = 27
+    Width = 20
     Height = 13
-    Caption = 'Nome'
+    Caption = 'Tipo'
   end
   object Label2: TLabel
     Left = 352
     Top = 29
-    Width = 17
+    Width = 30
     Height = 13
-    Caption = 'Cpf'
+    Caption = 'Senha'
   end
   object DBGrid1: TDBGrid
     Left = 32
-    Top = 88
+    Top = 96
     Width = 465
     Height = 169
     DataSource = dsClient
@@ -41,22 +41,34 @@ object Form1: TForm1
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'TIPO'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'SENHA'
+        Visible = True
+      end>
   end
-  object dbNome: TDBEdit
+  object dbTipo: TDBEdit
     Left = 32
     Top = 48
     Width = 273
     Height = 21
-    DataField = 'NOME'
+    CharCase = ecUpperCase
+    DataField = 'Tipo'
     DataSource = dsClient
     TabOrder = 1
   end
-  object edCpf: TDBEdit
+  object dbSenha: TDBEdit
     Left = 352
     Top = 48
     Width = 145
     Height = 21
-    DataField = 'CPF'
+    DataField = 'SENHA'
     DataSource = dsClient
     TabOrder = 2
   end
@@ -105,30 +117,37 @@ object Form1: TForm1
     TabOrder = 7
     OnClick = btCancelClick
   end
+  object BitBtn1: TBitBtn
+    Left = 190
+    Top = 326
+    Width = 152
+    Height = 33
+    Caption = 'Inserir'
+    TabOrder = 8
+    OnClick = BitBtn1Click
+  end
   object cdsCliente: TClientDataSet
     PersistDataPacket.Data = {
-      4B0000009619E0BD0100000018000000020000000000030000004B00044E4F4D
-      4501004900000001000557494454480200020028000343504601004900000001
-      00055749445448020002000B000000}
+      4D0000009619E0BD0100000018000000020000000000030000004D000553454E
+      48410100490000000100055749445448020002002800045449504F0100490000
+      0001000557494454480200020028000000}
     Active = True
     Aggregates = <>
     Params = <>
-    Left = 64
-    Top = 120
-    object cdsClienteNOME: TStringField
-      DisplayWidth = 48
-      FieldName = 'NOME'
+    Left = 56
+    Top = 104
+    object cdsClienteSENHA: TStringField
+      FieldName = 'SENHA'
       Size = 40
     end
-    object cdsClienteCPF: TStringField
-      DisplayWidth = 25
-      FieldName = 'CPF'
-      Size = 11
+    object cdsClienteTIPO: TStringField
+      FieldName = 'TIPO'
+      Size = 40
     end
   end
   object dsClient: TDataSource
     DataSet = cdsCliente
-    Left = 144
-    Top = 120
+    Left = 56
+    Top = 168
   end
 end
