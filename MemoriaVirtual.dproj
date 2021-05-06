@@ -107,6 +107,14 @@
             <FormType>dfm</FormType>
             <DesignClass>TDataModule</DesignClass>
         </DCCReference>
+        <DCCReference Include="src\DataSet.Serialize.Config.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.Consts.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.Export.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.Import.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.Language.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.UpdatedStatus.pas"/>
+        <DCCReference Include="src\DataSet.Serialize.Utils.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
